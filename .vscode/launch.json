@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "elfin-grammar（常驻模式）",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "program": "${workspaceFolder}",
+      "env": {
+        "CGO_ENABLED": "1"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "elfin-grammar（仅配置窗口）",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "program": "${workspaceFolder}",
+      "args": ["--config"],
+      "env": {
+        "CGO_ENABLED": "1"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "bubbletest（气泡验证）",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "program": "${workspaceFolder}/cmd/bubbletest",
+      "env": {
+        "CGO_ENABLED": "1"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}

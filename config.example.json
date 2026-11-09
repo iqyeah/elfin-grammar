@@ -1,0 +1,22 @@
+{
+  "api_key": "",
+  "base_url": "https://b.taobed.com/v1",
+  "model": "elfin-grammar",
+  "proxy_url": "",
+  "max_words": 40,
+  "max_chars": 300,
+  "web_max_words": 400,
+  "web_max_chars": 2000,
+  "clipboard_max_words": 400,
+  "clipboard_max_chars": 2000,
+  "clipboard_lang_ratio": 0.6,
+  "clipboard_monitor": false,
+  "typed_check": true,
+  "selection_check": true,
+  "debounce_ms": 300,
+  "select_debounce_ms": 1000,
+  "bubble_show_ms": 10000,
+  "min_known_ratio": 0.3,
+  "min_lang_ratio": 0.6,
+  "disclaimer_accepted": false
+}

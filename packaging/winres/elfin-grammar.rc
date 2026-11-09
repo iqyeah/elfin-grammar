@@ -1,0 +1,39 @@
+// elfin-grammar Windows 资源脚本：嵌入视觉样式清单、exe 图标与版本元数据。
+// 由 Makefile 的 windows 目标用 x86_64-w64-mingw32-windres 编译为
+// resource_windows_amd64.syso（文件名后缀使其仅参与 Windows 构建）。
+//
+// VERSIONINFO：补全 PE 元数据可显著降低杀软对 Go 二进制的启发式误报
+//（裸二进制无公司名/产品名时 ML 模型更易判定为可疑）。字符串保持 ASCII
+// 以避免 windres 对非 ASCII 编码的处理差异。
+#define IDI_ICON1 1
+IDI_ICON1 ICON "elfin-grammar.ico"
+1 24 "elfin-grammar.exe.manifest"
+
+1 VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+FILEFLAGSMASK   0x3F
+FILEFLAGS       0
+FILEOS          0x40004
+FILETYPE        1
+FILESUBTYPE     0
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "Elfin Grammar"
+            VALUE "FileDescription",  "Elfin Grammar AI writing assistant"
+            VALUE "FileVersion",      "1, 0, 0, 0"
+            VALUE "InternalName",     "elfin-grammar"
+            VALUE "LegalCopyright",   "Copyright (C) 2026 Elfin Grammar"
+            VALUE "OriginalFilename", "elfin-grammar.exe"
+            VALUE "ProductName",      "Elfin Grammar"
+            VALUE "ProductVersion",   "1, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
